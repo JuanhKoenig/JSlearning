@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>javascript - testing</title>
+</head>
+<body>
+    <header>
+
+        <section class="menu">
+            <!-- TODO: make this menu functional -->
+            <ul>
+                <li>empty</li>
+                <li>empty</li>
+                <li>empty</li>
+                <li>github</li>
+            </ul>
+
+        </section>
+    </header>
+
+    <main>
+
+        <!-- TODO: introduction to this project -->
+
+        <section class="testing__tools">
+
+            <h1> learning javascript</h1>
+            <button onclick="button__action()" class="clickme__button">click me!</button>
+
+        </section>
+
+
+        <h2>types of variables</h2>
+
+
+        <section class="main__variables">
+
+
+            <div class="explanation">
+                <p>In JavaScript, var, let, and const are used to declare variables
+                    var is the oldest way of declaring variables in JavaScript. It has a global or function/local scope.
+                    Variables declared with var can be re-declared and modified within the same scope.
+                    They are also hoisted to the top of their scope before execution.
+                    let and const were introduced in ES6. They have block-level scope
+                    and cannot be re-declared within the same scope. let is used for variables that may be reassigned, 
+                    while const is used for variables that should not be reassigned.
+                    Here’s a summary of the differences between var, let, and const:</p>
+            </div>
+
+
+            <a href="https://iili.io/JIe4AwF.jpg" target="_blank" class="img__variables__link"> click to see image</a>
+
+
+            <div class="demonstration"> 
+
+                <img class="img__variables" src="./images/variablesjs.jpg" alt="">
+
+            </div>
+
+
+            <div class="div__img__scope">
+
+                <img src="./images/scopejs.jpg" alt="code that shows the scope in js">
+                <!-- TODO: make this not visible on lower resolutions with media queries -->
+            </div>
+            
+
+        </section>
+
+        <section class="main__datatypes">
+
+            <h2>data types</h2>
+
+            <h3>primitives:</h3>
+
+                <p>In javasript there are 6 types of primitives data types, these data types are the following: </p>
+
+                <p><b>numbers: </b>Used to represent numerical values, including integers and floating-point numbers.</p>
+                
+                <p><b>strings: </b>Used to represent textual data, typically in between 
+                    double quotation marks or other ("", ``, '').</p>
+
+                <p><b>boolean: </b>Used to represent logical values true and false.</p>
+                
+                <p><b>undefined: </b>Used to represent a variable that has not beed assignes a value.</p>
+                
+                <p><b>null: </b>Used to represent an intentional absence of any object value, to make it easier to differenciate from the previous one,<i>undefined</i> has been declared but not given a value, while a null variable has been given a value</p>
+
+                <p><b>symbol: </b>Used to create unique identifiers for objects.</p>
+                    <!-- TODO: give the source of this info to avoid plagiarism -->
+                    <!-- https://itsourcecode.com/javascript-tutorial/what-is-primitive-data-types-in-javascript/ -->
+                    <!-- https://www.edureka.co/blog/data-types-in-javascript/ -->
+
+            <h3>non-primitives:</h3>
+
+                <p>non-primitives data are often called  reference types and they're created by the programmer and they're not defined </p>
+                <p>Non-primitive data types are <b>objects</b> that have <b>attributes</b> and <b>behaviors</b>. Attributes are the properties or characteristics of an object, such as its color, size, name, etc. Behaviors are the actions or functions that an object can perform, such as moving, speaking, calculating, etc.</p>
+                <p>Methods are a way of defining the behaviors of an object. A method is a block of code that performs a specific task when it is called or invoked. For example, a method called <b>greet()</b> might print “Hello” to the screen when it is called.</p>
+                <p>Non-primitive data types can be used to call methods to perform certain operations on their attributes or other data. For example, a non-primitive data type called String can call methods such as <b>length(), toUpperCase(), substring(),</b> etc. to manipulate the characters in the string. Another example is an array, which can call methods such as <b>sort(), reverse(), copyOf(),</b> etc. to change the order or content of the elements in the array.</p>
+
+                <p><b>array: </b>Used to store collections of data in a linear fashion.</p>
+                    <!-- TODO: add arrow functions from the class -->
+                <div class="code__container"><p class="codetext">const daysOfTheWeek = ["monday", "tuesday", "wensday", "thursday", "fryday", "saturday", "sunday"] <br>
+                    const evenNumbers = [2, 4, 6, 8, 10, 12, 14, 16] <br>
+                    const colors = ["red", "blue", "green", "white"]</p></div>
+
+
+                
+                <p><b>object: </b>Used to store collections of data and more complex entities.</p>
+
+
+                <div class="code__container"><p class="codetext">const person = { <br>
+                        <p class="tab">
+                        firstName: "Daniel",<br>
+                        lastName: "Scioli",<br>
+                        age: 2,<br>
+                        eyecolor: brown <br>
+                        arms: 1 <br>
+                        }</p></p></div>
+
+
+                <p><b>function: </b>Used to store reusable blocks of code.</p>
+                
+
+
+                <div class="code__container"><p class="codetext">function dividerByFive = { <br>
+                <p class="tab">const userImput = prompt(`choose a number`); <br>
+                const solution = (Math.floor(userImput / 5)) <br>
+                return alert(`your number divided by 5 is ${solution}`)}</p></p></div>
+                
+                <button onclick="dividerByFive()" class="clickme__button">test function</button>
+
+                    <!-- TODO: research date, regexp, map, and set types of data -->
+                    <!-- TODO: find a way to change color of some fonts in textareas -->
+
+        </section>
+
+        <section class="homework">
+
+            <h3>let's try to create a program with these tools</h3>
+
+            <a href="./pages/homework__todolist.html" target="_blank"><button class="clickme__button">let's go</button></a>
+
+
+
+
+
+        </section>
+
+    
+
+
+    </main>
+    
+    <script src="./main.js"></script>
+    
+    <footer></footer>
+</body>
+</html>
