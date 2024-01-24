@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600..900&family=Roboto+Mono&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>array methods and properties</title>
+</head>
+<body>
+    
+    <header>
+
+
+    </header>
+
+
+    <main>
+
+        <h1>Arrays</h1>
+
+        <p>In JavaScript, an array is a special variable that can hold more than one value at a time. It is a collection of similar or dissimilar data types, such as numbers, strings, objects, or even other arrays</p>
+
+        <div class="codebox">
+            
+            <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>, <span class="orangeColor">"sunday"</span> <span class="yellowColor">]</span> <br>
+            <span class="commentedCode">// we'll use this code to test the properties and methods</span>
+        </div>
+
+
+            <h3>properties: </h3>
+
+            <p><b>length</b>: Returns the numbers of elements in the array.</p>
+
+            <div class="codebox">
+            
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>, <span class="orangeColor">"sunday"</span> <span class="yellowColor">]</span> <br>
+                <span class="commentedCode"> //output: 7</span>
+            </div>
+
+            <p><b>concat()</b>: Returns a new array combining the elements of the original array with other arrys or values</p>
+
+            <div class="codebox">
+            
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>, <span class="orangeColor">"sunday"</span> <span class="yellowColor">]</span> <br>
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> monthsOfTheYear </span>= <span class="yellowColor">[</span><span class="orangeColor">"january"</span>, <span class="orangeColor">"february"</span>, <span class="orangeColor">"march"</span><span class="yellowColor">]</span> <br>
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> concatenatedArray </span>= <span class="lightblueColor"> daysOfTheWeek</span>.<span class ="lightyellowColor">concat</span><span class="yellowColor">(</span><span class="lightblueColor">monthsOfTheYear</span><span class="yellowColor">)</span> <br>
+                <span class="commentedCode"> //output: ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday", "january", "february", "march"]</span>
+            </div>
+
+            <p><b>indexOf()</b>: Returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
+
+
+            <div class="codebox">
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>, <span class="orangeColor">"sunday"</span> <span class="yellowColor">]</span> <br>
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> fridayNumber </span>= <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">indexOf</span><span class="yellowColor">(</span><span class="orangeColor">friday</span><span class="yellowColor">)</span> <br>
+
+                <span class="commentedCode"> //output: 4    notice that the first index of the arrays is not 1 but 0</span>
+            </div>
+
+
+            <p><b>join()</b>: Join all elements of an array into a string.</p>
+
+            <div class="codebox">
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>, <span class="orangeColor">"sunday"</span> <span class="yellowColor">]</span> <br>
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> joinExample </span>= <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">join</span><span class="yellowColor">(</span><span class="orangeColor">", "</span><span class="yellowColor">)</span> <br>
+
+                <span class="commentedCode"> //output: monday, tuesday, wendsday, thursday, friday, saturday, sunday</span>
+            </div>
+
+            <p><b>slice()</b>: Returns a shallow copy of a portion of an array.</p>
+
+            <div class="codebox">
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>, <span class="orangeColor">"sunday"</span> <span class="yellowColor">]</span> <br>
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> someDays </span>= <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">slice</span><span class="yellowColor">(</span><span class="lightgreenColor">1, 3</span><span class="yellowColor">)</span> <br>
+
+                <span class="commentedCode"> //output: monday, tuesday, wendsday, thursday, friday, saturday, sunday</span>
+            </div>
+
+            <p><b>push()</b>: Adds element at the end of the array.</p>
+
+            <div class="codebox">
+            
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span><span class="yellowColor">]</span> <br>
+                <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">push</span><span class="yellowColor">(</span><span class="orangeColor">"sunday"</span><span class="yellowColor">)</span> <br>
+                <span class="commentedCode">// output: ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday"]</span>
+            </div>
+    
+
+            <p><b>unshift()</b>: Adds element at the start of the array.</p>
+
+            <div class="codebox">
+            
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span><span class="yellowColor">]</span> <br>
+                <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">unshift</span><span class="yellowColor">(</span><span class="orangeColor">"monday"</span><span class="yellowColor">)</span> <br>
+                <span class="commentedCode">// output: ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday"]</span>
+            </div>
+
+            <p><b>pop()</b>: Removes element at the end of the array.</p>
+
+            <div class="codebox">
+            
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>,<br> <span class="orangeColor">"sunday"</span>,<span class="orangeColor">"monday"</span><span class="yellowColor">]</span> <br>
+                <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">pop</span><span class="yellowColor">(</span><span class="yellowColor">)</span> <br>
+                <span class="commentedCode">// output: ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday"]</span>
+            </div>
+
+            <p><b>shift()</b>: Removes element at the start of the array.</p>
+
+            
+            <div class="codebox">
+            
+                <span class="darkblueColor">const </span> <span class="lightblueColor"> daysOfTheWeek </span>= <span class="yellowColor">[</span><span class="orangeColor">"monday"</span>, <span class="orangeColor">"monday"</span>, <span class="orangeColor">"tuesday"</span>, <span class="orangeColor">"wensday"</span>, <span class="orangeColor">"thursday"</span>, <span class="orangeColor">"friday"</span>, <span class="orangeColor">"saturday"</span>,<br> <span class="orangeColor">"sunday"</span><span class="yellowColor">]</span> <br>
+                <span class="lightblueColor">daysOfTheWeek</span>.<span class="lightyellowColor">pop</span><span class="yellowColor">(</span><span class="yellowColor">)</span> <br>
+                <span class="commentedCode">// output: ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday"]</span>
+            </div>
+
+            <h3>methods</h3>
+
+            <p>A method is a function that is a property of an object. It can be called on that object, and it can access the object’s properties and other methods.
+                Here are some of the most commonly used array methods in JavaScript: </p>
+            
+            <p><b>forEach()</b>: This method executes a provided function once for each array element. It does not return anything</p>
+
+
+
+            <p><b>map()</b>: This method creates a new array with the results of calling a provided function on every element in the calling array</p>
+            <p><b>filter()</b>: This method creates a new array with all elements that pass the test implemented by the provided function</p>
+            <p><b>reduce()</b>: This method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value</p>
+            <p><b>sort()</b>: This method sorts the elements of an array in place and returns the sorted array</p>
+
+            
+    </main>
+
+
+
+    <footer></footer>
+</body>
+</html>

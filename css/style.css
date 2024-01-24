@@ -64,7 +64,50 @@ p {
     margin: 1%;
 }
 
+.codebox {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1vh;
+    color: rgb(243, 247, 250);
+    background-color: rgb(63, 62, 62);
+    font-family: "Inconsolata", monospace;
+    font-size: 14px;
+    min-height: 7vw;
+    white-space: nowrap;
+    overflow-x: scroll;
+    
+}
+.codebox::-webkit-scrollbar {
+    display: none;
+}
 
+.darkblueColor {
+    color: rgb(86, 156, 214);
+}
+
+.lightblueColor {
+    color: lightblue;
+}
+
+.orangeColor {
+    color: orange;
+}
+
+.yellowColor {
+    color: yellow;
+}
+
+.commentedCode {
+    color: darkgray;
+}
+
+.lightyellowColor {
+    color: rgb(235, 235, 154);
+}
+
+.lightgreenColor {
+    color: rgb(196, 243, 196);
+}
 
 /*--- My learning tools ---*/
 
