@@ -227,3 +227,7 @@ function testAddRecepie() {
     return postresDelUsuario;
 
 }
+
+
+const testingDOM = document.getElementById("DanielScioli");
+console.log(testingDOM.innerText);
